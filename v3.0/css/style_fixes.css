@@ -1,0 +1,145 @@
+/* --- LOGIN THEME FIX --- */
+.login-overlay {
+    background: radial-gradient(circle at center, #fffbeb, #f59e0b) !important;
+    /* Yellow theme */
+}
+
+.login-box {
+    border-top: 6px solid #b45309;
+    /* Darker amber */
+    box-shadow: 0 25px 50px -12px rgba(180, 83, 9, 0.5);
+}
+
+/* --- USER MODAL ALIGNMENT FIX --- */
+/* Target the flex container for the new user row */
+#user-management-modal .form-row {
+    display: flex;
+    align-items: flex-end;
+    /* Align bottom to match input lines */
+    gap: 10px;
+}
+
+#user-management-modal input {
+    margin-bottom: 0;
+    /* Remove default margin for alignment */
+}
+
+/* --- COMPACT CALCULATOR --- */
+#calculator-widget {
+    width: 260px;
+    /* Smaller width */
+    bottom: 80px;
+    right: 20px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+}
+
+.calc-display {
+    padding: 15px;
+}
+
+.calc-current {
+    font-size: 1.5rem;
+    /* Smaller font */
+}
+
+.calc-btn {
+    padding: 12px 0;
+    /* Compact buttons */
+    font-size: 1rem;
+}
+
+/* --- CALENDAR MODAL & WIDGET --- */
+#calendar-modal .modal-content {
+    width: 400px;
+    padding: 20px;
+    background: #fff;
+}
+
+.cal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cal-header h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--darker);
+}
+
+.cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.cal-day-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #94a3b8;
+    margin-bottom: 5px;
+}
+
+.cal-day {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+.cal-day:hover {
+    background: #f1f5f9;
+}
+
+.cal-day.today {
+    background: #eff6ff;
+    color: var(--primary);
+    font-weight: 700;
+    border: 1px solid var(--primary);
+}
+
+.cal-day.has-event::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--danger);
+    border-radius: 50%;
+    margin-top: 2px;
+}
+
+/* Header Tool Icons */
+.header-tool-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--dark);
+    cursor: pointer;
+    margin-left: 15px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.header-tool-btn:hover {
+    color: var(--primary);
+    transform: scale(1.1);
+}
+
+/* Calendar Event Popup (Inner) */
+.cal-event-detail {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff7ed;
+    border-radius: 8px;
+    border: 1px dashed var(--primary);
+    font-size: 0.85rem;
+    display: none;
+}
